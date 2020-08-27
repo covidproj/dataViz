@@ -39,6 +39,4 @@ tableauMondeNouvDec=newDeaths.iloc[:,0:2]
 tableauMonde=tableauMondeTotCas.merge(tableauMondeNouvCas[['date','nombre de nouveaux cas']])
 tableauMonde=tableauMonde.merge(tableauMondeNouvDec[['date','nombre de décès']])
 tableauMonde['Mois-Année']=tableauMonde['date'].dt.strftime('%b-%Y')
-tableauMonde.isnull().sum()
-print(tableauMonde)
-tableauMonde.to_csv()
+tableauMonde.to_csv('tabMonde.csv')
